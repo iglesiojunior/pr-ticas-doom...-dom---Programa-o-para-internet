@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://sm.ign.com/t/ign_br/screenshot/default/doom-alt-boxart00_cat3.1280.jpg');
+      background-size: cover;
+      background-repeat: repeat;
+      background-position: center;
+      background-attachment: fixed;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+    }
+
+    a {
+        gap: 2rem;
+    }
+
+    .sidebar-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      box-sizing: border-box;
+      overflow-y: auto;
+    }
+
+    .sidebar-nav h3 {
+      margin-top: 0;
+    }
+
+    .content {
+      margin-left: 220px;
+      padding: 20px;
+      flex: 1;
+    }
+
+    #cabeçalho {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(to top, #8b0000, crimson);
+    }
+
+    #hellyeah {
+      text-align: center;
+    }
+
+    div #filho_1::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883812550526/4A2738F6A1AAFA59643AC2F236E3553B2C472782/);
+    }
+
+    div #filho_2::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883812724811/028175F0783DC45AE06FD8A59D7BA3325E263EFC/);
+    }
+
+    div #filho_3::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883812946222/195DE6DEE88FACCEC15BB509CAFDE9AFFF047DDA/);
+    }
+
+    div #filho_4::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883813070344/BCE25B21752A017944F17B5F7429D71E2B902EED/);
+    }
+
+    div #filho_5::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883813240882/9641E20659EA9186E0E48CF1F29BE74C96725458/);
+    }
+
+    div #filho_6::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883813717041/D6E9B26886ABE93891F7026740A428CCC8D8327D/);
+    }
+
+    div #filho_7::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883813784672/F31F969724D0325E81C8299F11806100F6DAA284/);
+    }
+
+    div #filho_8::before {
+      content: url(https://images.steamusercontent.com/ugc/902111883812631207/001E8438783BB3DE8F2DCB5EB175B121D1D907CA/);
+    }
+
+    div {
+      text-align: left;
+      margin: 20px;
+    }
+
+    #pai {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px;
+    }
+
+    #pai p {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      box-shadow: 2px 2px 5px black;
+      margin: 0;
+      height: auto;
+      width: auto;
+    }
+
+    #resultadoFilhos a {
+      display: block;
+      margin-bottom: 8px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: crimson;
+      color: white;
+      border: 2px solid darkred;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      width: 100%;
+      box-shadow: 2px 2px 4px black;
+      transition: background-color 0.2s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: darkred;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <nav class="sidebar-nav">
+    <h3>Navegação</h3>
+    <div id="resultadoFilhos"></div>
+
+    <button id="btnPlayPause">▶️ Tocar música</button><br><br>
+    <button id="btnMute">🔇 Mutar</button>
+    <audio id="musica" loop>
+      <source src="doom_music.mp3" type="audio/mpeg">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+  </nav>
+
+  <div id="conteudo" class="content">
+    <header id="cabeçalho">
+      <h1>Aprendendo D.O.O.M..</h1>
+    </header>
+
+    <h2 id="hellyeah">Hell <strong>yeah</strong>🔥🔥🔥</h2>
+    <h2>Copiando monstros🤘</h2>
+
+    <div id="pai">
+      <p id="filho_1">Monstro 1</p>
+      <p id="filho_2">Monstro 2</p>
+      <p id="filho_3">Monstro 3</p>
+      <p id="filho_4">Monstro 4</p>
+      <p id="filho_5">Monstro 5</p>
+      <p id="filho_6">Monstro 6</p>
+      <p id="filho_7">Monstro 7</p>
+      <p id="filho_8">Monstro 8</p>
+    </div>
+
+    <h2>Capturando um Clique</h2>
+    <button id="botao1">Clique aqui master of doom</button>
+    <br><br>
+    <button id="botaoLimpar">🧹 Limpar parágrafo</button>
+
+    <h2>Obtendo o texto de uma caixa</h2>
+    <input id="texto">
+    <button id="botao2">Confirmar</button>
+    <div id="resultado2"></div>
+
+    <h2>Somar dois numeros</h2>
+    <label for="numero1"> Número 1</label>
+    <input id="numero1">
+    <label for="numero2"> Número 2</label>
+    <input id="numero2">
+    <br>
+    <button id="botaoSomar">Somar</button>
+    <div id="resultadoSoma"></div>
+
+    <h2>Mudança de um select</h2>
+    <select id="cidades">
+        <option value="Fortaleza">Fortaleza</option>
+        <option value="Teresina">Teresina</option>
+        <option value="São Luís">São Luís</option>
+    </select>
+    <div id="resultadoCidade"></div>
+
+    <h2>Mudança da cor da página</h2>
+    <input id="selecao_cor" type="color">
+
+    <h2>Atenção ao Contador de parágrafos!!</h2>
+    <div id="resultado_paragrafos" style="margin-top: 10px; font-weight: bold;"></div>
+
+      <div class="explicacao-propriedades" style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+    <h2>textContent vs innerText vs innerHTML</h2>
+    <p>
+      As propriedades <strong>textContent</strong>, <strong>innerText</strong> e <strong>innerHTML</strong> são usadas para acessar ou modificar o conteúdo de elementos HTML, mas cada uma se comporta de forma diferente:
+    </p>
+    <ul>
+      <li><strong>textContent:</strong> Retorna todo o conteúdo de texto, incluindo o que está escondido com CSS. Ex: <code>element.textContent = "Olá &lt;b&gt;mundo&lt;/b&gt;"</code> irá mostrar literalmente "Olá &lt;b&gt;mundo&lt;/b&gt;".</li>
+      <li><strong>innerText:</strong> Retorna apenas o texto visível (respeita o CSS como <code>display: none</code>) e ignora tags HTML. Ex: <code>element.innerText = "Olá &lt;b&gt;mundo&lt;/b&gt;"</code> também mostra "Olá <b>mundo</b>" como texto puro, sem aplicar a tag.</li>
+      <li><strong>innerHTML:</strong> Interpreta o conteúdo como HTML. Ex: <code>element.innerHTML = "Olá &lt;b&gt;mundo&lt;/b&gt;"</code> exibirá "Olá <b>mundo</b>" em negrito.</li>
+    </ul>
+    <p>Use <code>textContent</code> para segurança e performance, <code>innerText</code> quando quiser apenas o texto visível, e <code>innerHTML</code> se for necessário renderizar tags HTML.</p>
+  </div>
+
+    <div class="explicacao-css-dom" style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+    <h2>Alterando CSS com JavaScript via DOM</h2>
+    <p>
+      Podemos usar JavaScript para alterar estilos CSS de elementos HTML acessando a propriedade <code>style</code> de um elemento. Isso é útil para aplicar estilos dinamicamente sem precisar editar o CSS direto.
+    </p>
+    <p>Exemplo: ao clicar no botão abaixo, a cor do texto do título será alterada.</p>
+    <button onclick="document.getElementById('tituloDoom').style.color = 'crimson';">
+      Alterar cor do título
+    </button>
+  </div>
+
+  <!-- Título que será alterado -->
+  <h2 id="tituloDoom" style="margin-top: 15px;">Este título será alterado!</h2>
+
+  <!-- 7. Copiar texto em caixa alta -->
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+  <h2>Copiar em Caixa Alta</h2>
+  <input type="text" id="inputOriginal" placeholder="Digite algo...">
+  <input type="text" id="inputCaixaAlta" placeholder="Texto em caixa alta..." readonly>
+  <button onclick="copiarCaixaAlta()">Copiar</button>
+</div>
+
+<!-- 8. Alto Contraste e Reset -->
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+  <h2>Acessibilidade: Contraste</h2>
+  <button onclick="ativarContraste()">Ativar Alto Contraste</button>
+  <button onclick="resetarCores()">Resetar Cores</button>
+</div>
+
+<!-- 9. Aumentar e Diminuir Texto -->
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+  <h2>Acessibilidade: Tamanho do Texto</h2>
+  <button onclick="aumentarTexto()">Aumentar Texto</button>
+  <button onclick="diminuirTexto()">Diminuir Texto</button>
+</div>
+
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+  <h2>Calculadora Simples</h2>
+  <input type="number" id="valor1" placeholder="Valor 1">
+  <input type="number" id="valor2" placeholder="Valor 2">
+  <br><br>
+
+  <label><input type="radio" name="operacao" value="soma" checked> Soma (+)</label>
+  <label><input type="radio" name="operacao" value="subtracao"> Subtração (-)</label>
+  <label><input type="radio" name="operacao" value="multiplicacao"> Multiplicação (×)</label>
+  <label><input type="radio" name="operacao" value="divisao"> Divisão (÷)</label>
+  <br><br>
+
+  <button onclick="calcular()">Calcular</button>
+  <p id="resultadoCalculadora" style="margin-top: 10px; font-weight: bold;"></p>
+</div>
+
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+  <h2>Adicionar à Lista</h2>
+  <input type="text" id="itemLista" placeholder="Digite um item">
+  <button onclick="adicionarItemLista()">Adicionar</button>
+  <ul id="listaDinamica" style="margin-top: 10px;"></ul>
+</div>
+
+<div style="background-color: rgba(0, 0, 0, 0.5); padding: 15px; border-radius: 10px; box-shadow: 2px 2px 5px black; margin-top: 20px;">
+  <h2>Adicionar ao Select</h2>
+  <input type="text" id="itemSelect" placeholder="Digite um valor">
+  <button onclick="adicionarItemSelect()">Adicionar</button>
+  <br><br>
+  <select id="selectDinamico" style="padding: 5px; border-radius: 5px;"></select>
+</div>
+
+
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
